@@ -1,0 +1,167 @@
+/* Penyesuaian di atas style.css Titan untuk kebutuhan aplikasi */
+
+.hidden { display: none !important; }
+
+/* Input: biarkan huruf asli (Titan default uppercase) agar username/password tidak membingungkan */
+.form-control {
+  text-transform: none;
+  letter-spacing: .3px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  height: 38px;
+}
+.form-control.input-lg { height: 46px; font-size: 14px; }
+select.form-control { padding-top: 6px; padding-bottom: 6px; }
+label.font-alt { font-size: 11px; letter-spacing: 2px; font-weight: 400; color: #666; }
+
+/* ---------- Login hero ---------- */
+.home-section { overflow: hidden; }
+.login-box {
+  max-width: 380px;
+  margin: 0 auto;
+  text-align: left;
+}
+.login-box .form-control {
+  background: rgba(255, 255, 255, .08);
+  border-color: rgba(255, 255, 255, .3);
+  color: #fff;
+}
+.login-box .form-control::placeholder { color: rgba(255, 255, 255, .6); }
+.login-box .form-control:focus { background: rgba(255, 255, 255, .14); border-color: #fff; }
+.titan-caption { width: 70%; }
+@media (max-width: 767px) { .titan-caption { width: 100%; padding: 0 20px; } }
+.login-error { color: #ffb4a6; min-height: 1.4em; margin: 0 0 10px; font-size: 13px; }
+
+/* ---------- Header halaman ---------- */
+.page-header-module { padding: 150px 0 80px; transition: background-image .6s ease; }
+.page-header-module .module-title { color: #fff; margin: 0 0 22px; }
+.page-header-module .module-subtitle { color: rgba(255, 255, 255, .8); margin: 14px 0 0; }
+#page-wrap { min-height: 50vh; }
+
+/* ---------- Navbar ---------- */
+@media (min-width: 1200px) {
+  .navbar-custom .navbar-nav > li > a { padding-left: 13px; padding-right: 13px; letter-spacing: 2.5px; }
+}
+/* Menu aplikasi cukup banyak: pakai menu lipat (hamburger) di bawah 1200px */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .navbar-custom .navbar-header { float: none; }
+  .navbar-custom .navbar-toggle { display: block; }
+  .navbar-custom .navbar-collapse { border-top: 1px solid rgba(255,255,255,.1); max-height: none; }
+  .navbar-custom .navbar-collapse.collapse { display: none !important; }
+  .navbar-custom .navbar-collapse.collapse.in { display: block !important; }
+  .navbar-custom .navbar-nav, .navbar-custom .navbar-right { float: none !important; margin: 7px -15px; }
+  .navbar-custom .navbar-nav > li { float: none; }
+  .navbar-custom .navbar-nav > li > a { padding-top: 10px; padding-bottom: 10px; }
+  .navbar-custom .dropdown-menu { position: static; float: none; background: transparent; border: 0; box-shadow: none; }
+  .navbar-custom .nav li > a.active:after { display: none; }
+}
+.navbar-custom .nav li > a.active,
+.navbar-custom .nav li.active > a { color: #fff; }
+.navbar-custom .nav li > a.active:after {
+  content: ""; position: absolute; left: 15px; right: 15px; bottom: 12px; height: 1px; background: #fff;
+}
+.navbar-custom .dropdown-menu .user-meta {
+  padding: 8px 15px; color: rgba(255, 255, 255, .5); text-transform: none; letter-spacing: .5px; font-size: 12px;
+}
+
+/* ---------- Counter dashboard ---------- */
+.count-item { padding: 10px 0 30px; }
+.count-item .count-to { font-size: 42px; margin: 10px 0 6px; }
+.count-item .count-sub { color: #999; font-size: 12px; }
+
+/* ---------- Kartu / panel ---------- */
+.app-panel { margin-bottom: 50px; }
+.app-panel > h4 { margin-bottom: 0; }
+.app-panel > hr { margin-top: 12px; }
+.panel-tools { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.panel-tools .form-control { max-width: 320px; }
+.panel-tools .tools-left { display: flex; gap: 10px; flex: 1; flex-wrap: wrap; }
+
+/* Aktivitas */
+.activity-list { list-style: none; padding: 0; margin: 0; }
+.activity-list li {
+  display: flex; justify-content: space-between; gap: 16px;
+  padding: 14px 0; border-bottom: 1px solid #eaeaea;
+}
+.activity-list li:last-child { border-bottom: 0; }
+.activity-list .act-icon { font-size: 22px; color: #111; width: 34px; flex: none; }
+.activity-list .act-body { flex: 1; }
+.activity-list small { color: #999; }
+
+/* Progress stok */
+.stock-row { margin-bottom: 26px; }
+.stock-row h6 { margin: 0 0 10px; }
+
+/* Tabel */
+.table-wrap { overflow-x: auto; }
+.checkout-table { margin-bottom: 0; }
+.checkout-table th { font-family: "Roboto Condensed", sans-serif; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; font-weight: 400; }
+.checkout-table td, .checkout-table th { vertical-align: middle !important; }
+.checkout-table td.num, .checkout-table th.num { text-align: right; }
+.checkout-table td.actions { text-align: right; white-space: nowrap; }
+.checkout-table td.actions .btn + .btn { margin-left: 6px; }
+.checkout-table tbody tr.row-anim { animation-duration: .5s; }
+.empty-state { text-align: center; color: #999; padding: 40px 0; }
+.hint { color: #999; font-size: 12px; text-transform: none; letter-spacing: 0; font-family: "Open Sans", sans-serif; }
+
+.label { font-family: "Roboto Condensed", sans-serif; letter-spacing: 1px; font-weight: 400; padding: .35em .7em; }
+.label-dipinjam { background: #f0ad4e; }
+.label-selesai, .label-aktif { background: #111; }
+.label-nonaktif { background: #c9302c; }
+.label-muted { background: #e5e5e5; color: #555; }
+
+/* Modal */
+.modal-content { border: 0; }
+.modal-header { border-bottom-color: #eaeaea; }
+.modal-title { letter-spacing: 3px; font-size: 14px; }
+.modal.fade .modal-dialog { transform: translateY(30px) scale(.97); transition: transform .3s ease-out; }
+.modal.in .modal-dialog { transform: none; }
+.form-error { color: #c9302c; min-height: 1.2em; margin: 8px 0 0; font-size: 13px; }
+.form-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+
+/* Toast */
+.app-toast {
+  position: fixed; right: 20px; bottom: 60px; z-index: 2000; max-width: 360px;
+  background: rgba(10, 10, 10, .92); color: #fff; padding: 14px 18px; border-radius: 2px;
+  font-family: "Roboto Condensed", sans-serif; letter-spacing: 1px; font-size: 13px;
+}
+.app-toast.error { background: #c9302c; }
+
+/* Transisi konten antar halaman */
+#page.page-leave { opacity: 0; transform: translateY(10px); transition: opacity .2s, transform .2s; }
+
+.text-right-sm { text-align: right; }
+@media (max-width: 767px) {
+  .text-right-sm, .footer .copyright { text-align: center; }
+
+  /* Cegah iPhone zoom otomatis saat mengetuk kotak isian (butuh >= 16px) */
+  .form-control, .form-control.input-lg { font-size: 16px; }
+
+  /* Notifikasi selebar layar di bawah */
+  .app-toast { left: 12px; right: 12px; bottom: 12px; max-width: none; text-align: center; }
+
+  /* Tabel menjadi kartu bertumpuk */
+  .table-wrap { overflow: visible; }
+  .checkout-table, .checkout-table.table-border { border: 0; }
+  .checkout-table thead { display: none; }
+  .checkout-table, .checkout-table tbody, .checkout-table tr, .checkout-table td { display: block; width: 100%; }
+  .checkout-table tr { border: 1px solid #e5e5e5; margin-bottom: 14px; background: #fff !important; }
+  .checkout-table td {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    text-align: right !important; border: 0 !important; border-bottom: 1px solid #f2f2f2 !important; padding: 10px 14px !important;
+  }
+  .checkout-table td:last-child { border-bottom: 0 !important; }
+  .checkout-table td:before {
+    content: attr(data-label); flex: none; text-align: left;
+    font-family: "Roboto Condensed", sans-serif; text-transform: uppercase; letter-spacing: 2px; font-size: 10px; color: #999;
+  }
+  .checkout-table td.actions { justify-content: flex-end; background: #fafafa; }
+  .checkout-table td.actions:before { content: none; }
+  .checkout-table td.actions .btn { padding: 8px 14px; }
+  .page-header-module { padding: 110px 0 50px; }
+  .panel-tools { flex-direction: column; align-items: stretch; }
+  .panel-tools .tools-left { flex-direction: column; }
+  .panel-tools .form-control, .panel-tools select.form-control { max-width: none !important; width: 100%; }
+  .panel-tools > .btn { width: 100%; }
+  .navbar-custom .nav li > a.active:after { display: none; }
+}

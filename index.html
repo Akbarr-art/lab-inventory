@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab Inventory | Laboratory Inventory &amp; Borrowing Management System</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+  <meta name="theme-color" content="#111111">
+
+  <!-- Stylesheet template Titan -->
+  <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <link href="assets/lib/animate.css/animate.css" rel="stylesheet">
+  <link href="assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
+  <link href="assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Penyesuaian khusus aplikasi -->
+  <link href="assets/css/app.css" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <!-- Preloader Titan -->
+    <div class="page-loader">
+      <div class="loader">Loading...</div>
+    </div>
+
+    <!-- Navbar Titan (transparan di atas header, gelap saat di-scroll) -->
+    <nav class="navbar navbar-custom navbar-fixed-top navbar-transparent" role="navigation" id="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle hidden" id="nav-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse">
+            <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/dashboard">Lab Inventory</a>
+        </div>
+        <div class="collapse navbar-collapse" id="custom-collapse">
+          <ul class="nav navbar-nav navbar-right" id="nav-menu"></ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============ Halaman Login (hero Titan) ============ -->
+    <section id="login-view" class="home-section home-parallax home-fade home-full-height bg-dark-60 hidden"
+             data-background="assets/images/bg/login.jpg">
+      <div class="titan-caption">
+        <div class="caption-content">
+          <div class="font-alt mb-30 titan-title-size-1 wow fadeInDown">Laboratorium Komputer</div>
+          <div class="font-alt mb-40 titan-title-size-3 wow fadeIn" data-wow-delay=".2s">
+            <span class="rotate">Inventaris Barang | Peminjaman Barang | Pengembalian Barang</span>
+          </div>
+          <form id="login-form" class="login-box wow fadeInUp" data-wow-delay=".4s" autocomplete="on">
+            <div class="form-group">
+              <input class="form-control input-lg" type="text" name="username" placeholder="Username" required autocomplete="username">
+            </div>
+            <div class="form-group">
+              <input class="form-control input-lg" type="password" name="password" placeholder="Password" required autocomplete="current-password">
+            </div>
+            <p id="login-error" class="login-error"></p>
+            <button type="submit" class="btn btn-border-w btn-round btn-block">Masuk</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Aplikasi ============ -->
+    <div id="app-view" class="main hidden">
+      <section class="module bg-dark-60 page-header-module" id="page-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+              <h2 class="module-title font-alt" id="page-title"></h2>
+              <div class="module-subtitle font-serif" id="page-subtitle"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="module-small" id="page-wrap">
+        <div class="container" id="page"></div>
+      </section>
+
+      <hr class="divider-d">
+      <footer class="footer bg-dark">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <p class="copyright font-alt">&copy; <span id="year"></span> Lab Inventory &amp; Borrowing System</p>
+            </div>
+            <div class="col-sm-6">
+              <p class="copyright font-alt text-right-sm">Template: Titan</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
+  </main>
+
+  <!-- Modal (Bootstrap) -->
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Tutup"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title font-alt" id="modal-title"></h4>
+        </div>
+        <div class="modal-body" id="modal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="app-toast hidden"></div>
+
+  <!-- JavaScript template Titan -->
+  <script src="assets/lib/jquery/dist/jquery.js"></script>
+  <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="assets/lib/wow/dist/wow.js"></script>
+  <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <!-- Aplikasi -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
