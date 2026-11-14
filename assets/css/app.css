@@ -37,6 +37,11 @@ label.font-alt { font-size: 11px; letter-spacing: 2px; font-weight: 400; color: 
 .page-header-module .module-title { color: #fff; margin: 0 0 22px; }
 .page-header-module .module-subtitle { color: rgba(255, 255, 255, .8); margin: 14px 0 0; }
 #page-wrap { min-height: 50vh; }
+/* Footer selalu di dasar layar walaupun isi halaman pendek */
+#app-view { display: flex; flex-direction: column; min-height: 100vh; min-height: 100dvh; }
+#app-view > #page-wrap { flex: 1 0 auto; }
+#app-view > .divider-d, #app-view > .footer { flex-shrink: 0; }
+
 
 /* ---------- Navbar ---------- */
 @media (min-width: 1200px) {
